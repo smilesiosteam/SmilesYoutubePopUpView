@@ -15,7 +15,6 @@ let package = Package(
             targets: ["YoutubePopUpView"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/youtube/youtube-ios-player-helper.git", branch: "main")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -25,7 +24,6 @@ let package = Package(
         .target(
             name: "YoutubePopUpView",
             dependencies: [
-                .product(name: "youtube-ios-player-helper", package: "youtube-ios-player-helper")
             ]),
         .testTarget(
             name: "YoutubePopUpViewTests",
