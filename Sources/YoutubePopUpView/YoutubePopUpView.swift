@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import youtube_ios_player_helper
 
-public @objc protocol YoutubeViewDelegate: AnyObject {
+ @objc protocol YoutubeViewDelegate: AnyObject {
     @objc func didTappedClose()
     @objc func didTappedExpand()
 }
@@ -35,14 +35,14 @@ public class YoutubePopUpView: UIView, NibLoadable {
         setupFromNib()
     }
     
-    public  @IBAction func onCloseBtnTapped(_ sender: Any) {
+      @IBAction func onCloseBtnTapped(_ sender: Any) {
         print("close tapped")
         if ytViewDelegate != nil {
             ytViewDelegate?.didTappedClose()
         }
     }
     
-    public  @IBAction func onExpandBtnTapped(_ sender: Any) {
+      @IBAction func onExpandBtnTapped(_ sender: Any) {
         print("Expand tapped")
         if ytViewDelegate != nil {
             ytViewDelegate?.didTappedExpand()
@@ -50,7 +50,7 @@ public class YoutubePopUpView: UIView, NibLoadable {
         }
     }
     
-    public  @objc func playVideo(videoURL: String?) {
+      @objc func playVideo(videoURL: String?) {
         
         self.thumbImgView.isHidden = true
         self.ytPlayerView.isHidden = false
