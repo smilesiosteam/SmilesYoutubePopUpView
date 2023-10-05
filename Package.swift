@@ -26,9 +26,9 @@ let package = Package(
             name: "YoutubePopUpView",
             dependencies: [
                 .product(name: "YouTubeiOSPlayerHelper", package: "youtube-ios-player-helper")
-            ]),
-        .testTarget(
-            name: "YoutubePopUpViewTests",
-            dependencies: ["YoutubePopUpView"]),
+            ],
+            resources: [
+                .process("Resources")
+            ])
     ]
 )
