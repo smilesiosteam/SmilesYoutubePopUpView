@@ -16,7 +16,7 @@ import SmilesUtilities
      @objc func didTappedExpand()
 }
 
-public class YoutubePopUpView: UIView, NibLoadable {
+public class YoutubePopUpView: UIView, YTNibLoadable {
     @IBOutlet private var containerView: UIView!
     @IBOutlet weak var shadowParentView: UIView!
     @IBOutlet weak var roundedCornerView: UIView!
@@ -105,11 +105,11 @@ extension YoutubePopUpView: YTPlayerViewDelegate {
     }
 
 }
-public protocol NibLoadable {
+public protocol YTNibLoadable {
     static var nibName: String { get }
 }
 
-public extension NibLoadable where Self: UIView {
+public extension YTNibLoadable where Self: UIView {
 
     static var nibName: String {
         return String(describing: Self.self) // defaults to the name of the class implementing this protocol.
