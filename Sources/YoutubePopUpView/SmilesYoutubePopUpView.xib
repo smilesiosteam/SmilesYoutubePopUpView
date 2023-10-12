@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmilesYoutubePopUpView" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmilesYoutubePopUpView" customModule="YoutubePopUpView">
             <connections>
                 <outlet property="closeBtn" destination="DQQ-By-1ZR" id="pxx-p5-RAG"/>
                 <outlet property="containerView" destination="zgk-pq-rLw" id="XNS-zC-8vS"/>
