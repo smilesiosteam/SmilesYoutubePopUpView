@@ -11,9 +11,9 @@ import AVFoundation
 import YouTubeiOSPlayerHelper
 import SmilesUtilities
 
- @objc protocol YoutubeViewDelegate: AnyObject {
-    @objc func didTappedClose()
-    @objc func didTappedExpand()
+ @objc public protocol YoutubeViewDelegate: AnyObject {
+     @objc func didTappedClose()
+     @objc func didTappedExpand()
 }
 
 public class YoutubePopUpView: UIView, NibLoadable {
@@ -23,10 +23,10 @@ public class YoutubePopUpView: UIView, NibLoadable {
     
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var expandBtn: UIButton!
-    @objc @IBOutlet weak var thumbImgView: UIImageView!
+    @objc @IBOutlet weak public var thumbImgView: UIImageView!
     @IBOutlet weak var ytPlayerView: YTPlayerView!
     
-    @objc var ytViewDelegate: YoutubeViewDelegate?
+    @objc public var ytViewDelegate: YoutubeViewDelegate?
     @objc var nibName = "YoutubePopUpView"
     @objc var contentView: UIView?
     
@@ -59,7 +59,7 @@ public class YoutubePopUpView: UIView, NibLoadable {
         }
     }
     
-      @objc func playVideo(videoURL: String?) {
+    @objc public func playVideo(videoURL: String?) {
         
         self.thumbImgView.isHidden = true
         self.ytPlayerView.isHidden = false
