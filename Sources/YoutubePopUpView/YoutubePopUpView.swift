@@ -7,7 +7,9 @@
 
 import Foundation
 import UIKit
-import youtube_ios_player_helper
+import AVFoundation
+import YouTubeiOSPlayerHelper
+import SmilesUtilities
 
  @objc protocol YoutubeViewDelegate: AnyObject {
     @objc func didTappedClose()
@@ -97,8 +99,8 @@ public class YoutubePopUpView: UIView, NibLoadable {
 }
 
 
-public extension YoutubePopUpView: YTPlayerViewDelegate {
-    func  playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+extension YoutubePopUpView: YTPlayerViewDelegate {
+    public func  playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         playerView.playVideo()
     }
 
