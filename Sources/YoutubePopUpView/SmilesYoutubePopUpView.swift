@@ -11,12 +11,12 @@ import AVFoundation
 import YouTubeiOSPlayerHelper
 import SmilesUtilities
 
- @objc public protocol YoutubeViewDelegate: AnyObject {
+ @objc public protocol SmilesYoutubeViewDelegate: AnyObject {
      @objc func didTappedClose()
      @objc func didTappedExpand()
 }
 
-public class YoutubePopUpView: UIView, YTNibLoadable {
+public class SmilesYoutubePopUpView: UIView, YTNibLoadable {
     @IBOutlet private var containerView: UIView!
     @IBOutlet weak var shadowParentView: UIView!
     @IBOutlet weak var roundedCornerView: UIView!
@@ -26,8 +26,8 @@ public class YoutubePopUpView: UIView, YTNibLoadable {
     @objc @IBOutlet weak public var thumbImgView: UIImageView!
     @IBOutlet weak var ytPlayerView: YTPlayerView!
     
-    @objc public var ytViewDelegate: YoutubeViewDelegate?
-    @objc var nibName = "YoutubePopUpView"
+    @objc public var ytViewDelegate: SmilesYoutubeViewDelegate?
+    @objc var nibName = "SmilesYoutubePopUpView"
     @objc var contentView: UIView?
     
     public  required init?(coder aDecoder: NSCoder) {
@@ -38,7 +38,7 @@ public class YoutubePopUpView: UIView, YTNibLoadable {
         self.shadowParentView.addShadowToSelf(offset: CGSize(width: 2.0, height: 2.0), color: UIColor.lightGray, radius: 4, opacity: 0.8)
         roundedCornerView.RoundedViewConrner(cornerRadius: 12)
     }
-
+    
     public  override init(frame: CGRect) {
         super.init(frame: frame)
         setupFromNib()
@@ -99,7 +99,7 @@ public class YoutubePopUpView: UIView, YTNibLoadable {
 }
 
 
-extension YoutubePopUpView: YTPlayerViewDelegate {
+extension SmilesYoutubePopUpView: YTPlayerViewDelegate {
     public func  playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         playerView.playVideo()
     }
