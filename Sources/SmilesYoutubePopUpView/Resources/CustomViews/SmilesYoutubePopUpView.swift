@@ -122,8 +122,11 @@ public extension YTNibLoadable where Self: UIView {
     }
 
     func setupFromNib() {
-        
-        guard let view = Self.nib.instantiate(withOwner: self, options: nil).first as? UIView else { fatalError("Error loading \(self) from nib") }
+        let bundle = Bundle.module
+        guard let view = bundle.loadNibNamed("SmilesYoutubePopUpView", owner: self, options: nil)?.first as? SmilesYoutubePopUpView else {
+            fatalError("Error loading \(self) from nib")
+            }
+       // guard let view = Self.nib.instantiate(withOwner: self, options: nil).first as? UIView else { fatalError("Error loading \(self) from nib") }
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
