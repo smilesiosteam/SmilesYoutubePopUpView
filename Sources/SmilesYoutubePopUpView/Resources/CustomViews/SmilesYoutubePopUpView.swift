@@ -116,7 +116,8 @@ public extension YTNibLoadable where Self: UIView {
     }
 
     static var nib: UINib {
-        let bundle = Bundle(for: Self.self)
+        
+        let bundle = Bundle.module
         return UINib(nibName: Self.nibName, bundle: bundle)
     }
 
