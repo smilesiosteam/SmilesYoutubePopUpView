@@ -1,11 +1,10 @@
 import XCTest
-@testable import YoutubePopUpView
+@testable import SmilesYoutubePopUpView
 
-final class YoutubePopUpViewTests: XCTestCase {
+final class SmilesYoutubePopUpViewTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(YoutubePopUpView().text, "Hello, World!")
     }
 }

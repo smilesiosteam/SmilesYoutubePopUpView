@@ -121,6 +121,7 @@ public extension YTNibLoadable where Self: UIView {
     }
 
     func setupFromNib() {
+        
         guard let view = Self.nib.instantiate(withOwner: self, options: nil).first as? UIView else { fatalError("Error loading \(self) from nib") }
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
