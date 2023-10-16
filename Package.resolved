@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/smilesiosteam/SmilesUtilities.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "f770d6660e84018f1547ef3244618fd7780d7ea9"
+        "branch" : "shared_Models",
+        "revision" : "b085d1105852cf11f1b19f8bf9c8e48826d7715a"
       }
     },
     {
